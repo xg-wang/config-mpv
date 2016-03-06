@@ -1,6 +1,6 @@
 -- If the laptop is on battery, the VO set in the config will be choosen,
 -- else the one defined with „hqvo“ is used.
-local hqvo = "opengl-hq:dither-depth=auto:gamma-auto:interpolation:correct-downscaling=no:icc-profile-auto:icc-cache-dir=~/.config/mpv/tmp/icc-cache:blend-subtitles=yes"
+local hqvo = "opengl-hq:dither-depth=auto:gamma-auto:interpolation:correct-downscaling=no:icc-profile-auto:icc-cache-dir=~/.config/mpv/tmp/icc-cache"
 local utils = require 'mp.utils'
 if mp.get_property_bool("option-info/vo/set-from-commandline") == true then
     return
@@ -11,5 +11,5 @@ res = utils.subprocess(t)
 if res.stdout ~= "No adapter attached.\n" then
     mp.set_property("options/vo", hqvo)
     -- to activate interpolation
-    mp.set_property("options/video-sync", "display-resample")
+    -- mp.set_property("options/video-sync", "display-resample")
 end
