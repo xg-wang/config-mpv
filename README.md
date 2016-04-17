@@ -6,6 +6,6 @@ Originally forked form [songchenwen](https://github.com/songchenwen/dotfiles/tre
 
 Some automation is added to mpv.
 
-- Automatically add files with similar name in the same directory to play list.
-- Automatically change video output to highquality when battery adaptor is on.
-
+- Add files with similar name in the same directory to play list.
+- Change video output to highquality when battery adaptor is on.
+- Add unfinished video/audio with the "Unfinished" tag, and remove it when the you finish. You need a tag name "Unfinished" first to use this.
